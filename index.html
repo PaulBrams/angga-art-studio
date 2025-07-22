@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angga Art Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-family: 'Antonio', sans-serif;
+      font-size: 2.5rem;
+      color: #e94560;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #e94560;
+    }
+
+    .hero {
+      height: 80vh;
+      background: url('https://images.pexels.com/photos/6593503/pexels-photo-6593503.jpeg?_gl=1*wl9twd*_ga*MTIyMDUzMzM0Ny4xNzUyMjM4MzY4*_ga_8JE65Q40S6*czE3NTMxOTI5MTckbzMkZzEkdDE3NTMxOTMyMTkkajU5JGwwJGgw') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 60px 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #e94560;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #000;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+</head>
+
+<body>
+  <header>
+    <h1>Angga Art Tattoo Studio</h1>
+    <nav>
+      <a href="#gallery">Galeri</a>
+      <a href="#booking">Booking</a>
+      <a href="#about">Tentang</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Ekspresikan Jiwa Melalui Tinta</h2>
+  </section>
+
+  <section id="about">
+    <h2>Tentang Kami</h2>
+    <p style="margin-top: 20px; max-width: 800px; line-height: 1.6;">
+      Angga Art Studio adalah rumah bagi para pecinta seni tattoo. Dengan gaya yang unik dan detail artistik tinggi, kami menghadirkan pengalaman tattoo yang tidak hanya indah secara visual, tetapi juga bermakna. Kami percaya bahwa tattoo adalah ekspresi jiwa yang abadi.
+    </p>
+  </section>
+
+  <section id="gallery">
+    <h2>Galeri Karya</h2>
+    <div class="gallery">
+      <img src="1.jpeg" alt="Tattoo lengan bergaya realisme">
+      <img src="2.jpeg" alt="Tattoo punggung dengan desain tribal">
+      <img src="https://images.unsplash.com/photo-1599058917212-1e6b5c02b5c2?auto=format&fit=crop&w=800&q=80" alt="tattoo3">
+      <img src="https://images.unsplash.com/photo-1612277790637-58b93cd89c6e?auto=format&fit=crop&w=800&q=80" alt="tattoo4">
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Booking Konsultasi</h2>
+    <form action="https://formspree.io/f/xgepqokd" method="POST">
+      <input type="text" name="name" placeholder="Nama Anda" required>
+      <input type="email" name="email" placeholder="Email Anda" required>
+      <textarea name="message" rows="5" placeholder="Deskripsikan tattoo impian Anda..." required></textarea>
+      <button type="submit">Kirim Booking</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 InkSoul Studio. All rights reserved.
+    <p>Ikuti kami: 
+  <a href="https://www.instagram.com/dekangga_tatto?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="color:#e94560; text-decoration:none;">Instagram</a>
+</p>
+
+  </footer>
+
+</body>
+</html>
