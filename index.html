@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angga Art Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Angga Art Tattoo Studio - Jasa Tattoo Profesional & Artistik</title>
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
@@ -26,12 +26,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
 
     header h1 {
       font-family: 'Antonio', sans-serif;
       font-size: 2.5rem;
       color: #e94560;
+    }
+
+    nav {
+      display: flex;
     }
 
     nav a {
@@ -47,7 +52,7 @@
 
     .hero {
       height: 80vh;
-      background: url('https://images.pexels.com/photos/6593503/pexels-photo-6593503.jpeg?_gl=1*wl9twd*_ga*MTIyMDUzMzM0Ny4xNzUyMjM4MzY4*_ga_8JE65Q40S6*czE3NTMxOTI5MTckbzMkZzEkdDE3NTMxOTMyMTkkajU5JGwwJGgw') no-repeat center center/cover;
+      background: url('https://images.pexels.com/photos/6593503/pexels-photo-6593503.jpeg') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -73,6 +78,8 @@
 
     .gallery img {
       width: 100%;
+      max-height: 300px;
+      object-fit: cover;
       border-radius: 8px;
       transition: transform 0.3s;
     }
@@ -113,18 +120,68 @@
       font-size: 0.9rem;
       color: #aaa;
     }
-  </style>
-  <style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        padding: 20px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+        padding: 15px;
+      }
+
+      section {
+        padding: 40px 20px;
+      }
+
+      nav a {
+        margin: 10px 0;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header>
     <h1>Angga Art Tattoo Studio</h1>
+    <div class="hamburger" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
       <a href="#gallery">Galeri</a>
       <a href="#booking">Booking</a>
@@ -148,14 +205,14 @@
     <div class="gallery">
       <img src="1.jpeg" alt="Tattoo lengan bergaya realisme">
       <img src="2.jpeg" alt="Tattoo punggung dengan desain tribal">
-      <img src="https://images.unsplash.com/photo-1599058917212-1e6b5c02b5c2?auto=format&fit=crop&w=800&q=80" alt="tattoo3">
-      <img src="https://images.unsplash.com/photo-1612277790637-58b93cd89c6e?auto=format&fit=crop&w=800&q=80" alt="tattoo4">
+      <img src="https://images.unsplash.com/photo-1599058917212-1e6b5c02b5c2?auto=format&fit=crop&w=800&q=80" alt="Tattoo realistik hitam putih">
+      <img src="https://images.unsplash.com/photo-1612277790637-58b93cd89c6e?auto=format&fit=crop&w=800&q=80" alt="Tattoo berwarna tema old school">
     </div>
   </section>
 
   <section id="booking">
     <h2>Booking Konsultasi</h2>
-    <form action="https://formspree.io/f/xgepqokd" method="POST">
+    <form action="https://formspree.io/f/yourformid" method="POST">
       <input type="text" name="name" placeholder="Nama Anda" required>
       <input type="email" name="email" placeholder="Email Anda" required>
       <textarea name="message" rows="5" placeholder="Deskripsikan tattoo impian Anda..." required></textarea>
@@ -164,12 +221,7 @@
   </section>
 
   <footer>
-    &copy; 2025 InkSoul Studio. All rights reserved.
-    <p>Ikuti kami: 
-  <a href="https://www.instagram.com/dekangga_tatto?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="color:#e94560; text-decoration:none;">Instagram</a>
-</p>
-
+    <p>&copy; 2025 Angga Art Tattoo Studio. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
